@@ -126,19 +126,3 @@ Technical-Documentation-Assistant/
 - Support OCR for scanned PDFs.
 - Add automated tests for document processing and retrieval.
 
-
-
-## RAG Architecture
-
-```mermaid
-flowchart TD
-    A[PDF / TXT Document] --> B[Text Extraction]
-    B --> C[Text Chunking]
-    C --> D[Hugging Face Embeddings]
-    D --> E[(ChromaDB Vector Store)]
-    F[User Question] --> G[Similarity Search]
-    E --> G
-    G --> H[Top 3 Relevant Chunks]
-    H --> I[Groq LLM]
-    I --> J[Answer with Source Citations]
-```
